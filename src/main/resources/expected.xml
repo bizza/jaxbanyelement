@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PurchaseOrder xmlns="http://tempuri.org/PurchaseOrderSchema.xsd">
+    <ShipToList>
+        <ShipTo country="US">
+            <name>Walter White</name>
+            <street>Oil Street</street>
+            <city>Dallas</city>
+            <state>TX</state>
+            <zip>6543</zip>
+        </ShipTo>
+    </ShipToList>
+    <BillTo country="US">
+        <name>Bill Smith</name>
+        <street>Free Street</street>
+        <city>San Francisco</city>
+        <state>CA</state>
+        <zip>12345</zip>
+    </BillTo>
+        <payload>
+            <item>
+                <name>Sample</name>
+                <code>SI-1234</code>
+                <price>123</price>
+                <store></store>
+            </item>
+        </payload>
+</PurchaseOrder>
