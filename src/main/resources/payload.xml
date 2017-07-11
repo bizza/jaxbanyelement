@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payload>
+    <item>
+        <name>Sample</name>
+        <code>SI-1234</code>
+        <price>123</price>
+        <store></store>
+    </item>
+</payload>

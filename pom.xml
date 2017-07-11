@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sample</groupId>
+    <artifactId>jaxb.anyelement</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <version>2.3</version>
+                <executions>
+                    <execution>
+                        <id>xjc</id>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <laxSchemaValidation>false</laxSchemaValidation>
+                    <clearOutputDir>false</clearOutputDir>
+
+                    <xjcSourceExcludeFilters>
+                        <filter implementation="org.codehaus.mojo.jaxb2.shared.filters.pattern.PatternFileFilter">
+                            <patterns>
+                                <pattern>\.txt</pattern>
+                                <pattern>\.json</pattern>
+                                <pattern>.DS_Store</pattern>
+                                <pattern>\.java</pattern>
+                                <pattern>\.wsdl</pattern>
+                                <pattern>\.xml</pattern>
+                                <pattern>bf-2.xsd</pattern>
+                                <pattern>ws-addr.xsd</pattern>
+                                <pattern>ws-addr-wsdl.xsd</pattern>
+                                <pattern>\.wsdl</pattern>
+                                <pattern>\.xml</pattern>
+
+
+                            </patterns>
+                        </filter>
+                    </xjcSourceExcludeFilters>
+                </configuration>
+            </plugin>
+
+
+        </plugins>
+
+
+    </build>
+
+</project>
